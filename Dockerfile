@@ -10,6 +10,6 @@ FROM openjdk:17
 
 EXPOSE 8080
 
-COPY ./prueba_api-v001.jar prueba_api-v001.jar
+COPY --from=build /app/target/prueba_api-v001.jar /app/prueba_api-v001.jar
 
-ENTRYPOINT ["java", "-jar", "prueba_api-v001.jar"]
+ENTRYPOINT ["java", "-jar", "/app/prueba_api-v001.jar"]
