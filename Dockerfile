@@ -4,6 +4,6 @@ RUN mvn clean package
 
 FROM openjdk:17
 
-COPY ./target/prueba_api-v001.jar prueba_api-v001.jar
+COPY ./prueba_api-v001.jar prueba_api-v001.jar
 
 ENTRYPOINT ["java", "-jar", "prueba_api-v001.jar"]
